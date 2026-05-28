@@ -28,7 +28,7 @@ def load_matches(competition_id, season_id=None):
 
                             match_id = match.get("match_id")
 
-                            # FILTER BY SEASON IF AVAILABLE
+                            # FILTER BY SEASON
                             if season_id is not None:
 
                                 match_season = (
