@@ -1,10 +1,20 @@
 import json
 import os
 
+
 def load_competitions():
-    file_path = os.path.join("data", "competitions.json")
+    current_dir = os.path.dirname(__file__)
+
+    file_path = os.path.join(
+        current_dir,
+        "..",
+        "data",
+        "competitions.json"
+    )
+
+    file_path = os.path.abspath(file_path)
 
     with open(file_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
+        competitions = json.load(f)
 
-    return data
+    return competitions
