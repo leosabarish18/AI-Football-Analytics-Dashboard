@@ -2,7 +2,7 @@ import json
 import os
 
 
-def load_matches(competition_id):
+def load_matches(competition_id, season_id=None):
 
     matches_folder = f"backend/data/matches/{competition_id}"
 
@@ -28,8 +28,21 @@ def load_matches(competition_id):
 
                             match_id = match.get("match_id")
 
+                            # FILTER BY SEASON IF AVAILABLE
+                            if season_id is not None:
+
+                                match_season = (
+                                    match.get("season", {})
+                                    .get("season_id")
+                                )
+
+                                if match_season != season_id:
+                                    continue
+
                             # CHECK EVENT FILE EXISTS
-                            event_file = f"backend/data/events/{match_id}.json"
+                            event_file = (
+                                f"backend/data/events/{match_id}.json"
+                            )
 
                             if os.path.exists(event_file):
 
