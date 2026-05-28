@@ -1,26 +1,27 @@
 import json
 import os
 
+
 def load_matches(competition_id, season_id):
 
-    folder_path = os.path.join(
-        "data",
-        "matches",
-        str(competition_id)
-    )
+    file_path = f"backend/data/matches/{competition_id}/{season_id}.json"
 
-    if not os.path.exists(folder_path):
+    # DEBUG
+    print("Loading:", file_path)
+
+    if not os.path.exists(file_path):
+        print("FILE NOT FOUND")
         return []
 
-    season_file = os.path.join(
-        folder_path,
-        f"{season_id}.json"
-    )
+    try:
+        with open(file_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
 
-    if not os.path.exists(season_file):
+        if isinstance(data, list):
+            return data
+
         return []
 
-    with open(season_file, "r", encoding="utf-8") as f:
-        matches = json.load(f)
-
-    return matches
+    except Exception as e:
+        print("MATCH LOAD ERROR:", e)
+        return []
