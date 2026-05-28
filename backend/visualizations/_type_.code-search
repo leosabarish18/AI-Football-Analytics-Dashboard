@@ -1,0 +1,16 @@
+# Query: ["type"]
+# ContextLines: 1
+
+4 results - 2 files
+
+backend\visualizations\match_stats.py:
+  6          "Total Events": len(df),
+  7:         "Total Passes": len(df[df["type.name"] == "Pass"]),
+  8:         "Total Shots": len(df[df["type.name"] == "Shot"]),
+  9:         "Total Fouls": len(df[df["type.name"] == "Foul Committed"]),
+  10      }
+
+backend\visualizations\shot_map.py:
+  7          (df["team"] == team_name) &
+  8:         (df["type.name"] == "Shot")
+  9      ]

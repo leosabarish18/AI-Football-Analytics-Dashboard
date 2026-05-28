@@ -1,0 +1,19 @@
+# Query: ["team"]
+# ContextLines: 1
+
+5 results - 2 files
+
+backend\visualizations\match_stats.py:
+   8  
+   9:     home_team = df["team.name"].dropna().unique()[0]
+  10  
+  11:     away_team = df["team.name"].dropna().unique()[1]
+  12  
+  13:     home_df = df[df["team.name"] == home_team]
+  14:     away_df = df[df["team.name"] == away_team]
+  15  
+
+backend\visualizations\shot_map.py:
+  6      shot_df = df[
+  7:         (df["team.name"] == team_name) &
+  8          (df["type"] == "Shot")
