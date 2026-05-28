@@ -144,6 +144,15 @@ selected_match = st.sidebar.selectbox(
     list(match_options.keys())
 )
 
+if not match_options:
+    st.warning("No matches available for selected tournament.")
+    st.stop()
+
+selected_match = st.sidebar.selectbox(
+    "Select Match",
+    list(match_options.keys())
+)
+
 match_id = match_options[selected_match]
 
 # ---------------------------------------------------
