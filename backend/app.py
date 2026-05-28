@@ -132,22 +132,23 @@ match_options = {}
 
 for match in matches:
 
-    home_team = match["home_team"]["home_team_name"]
-    away_team = match["away_team"]["away_team_name"]
+    try:
+        home_team = match["home_team"]["home_team_name"]
+        away_team = match["away_team"]["away_team_name"]
 
-    label = f"{home_team} vs {away_team}"
+        label = f"{home_team} vs {away_team}"
 
-    match_options[label] = match["match_id"]
+        match_options[label] = match["match_id"]
 
-selected_match = st.sidebar.selectbox(
-    "Select Match",
-    list(match_options.keys())
-)
+    except:
+        continue
 
+# CHECK EMPTY MATCHES FIRST
 if not match_options:
     st.warning("No matches available for selected tournament.")
     st.stop()
 
+# THEN CREATE SELECTBOX
 selected_match = st.sidebar.selectbox(
     "Select Match",
     list(match_options.keys())
