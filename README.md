@@ -144,4 +144,4 @@ https://github.com/leosabarish18
 
 ## Match Statistics
 
-![Match Statistics](screenshots/matchstats.png)
+![Match Statistics](screenshots/matchstatic.png)
