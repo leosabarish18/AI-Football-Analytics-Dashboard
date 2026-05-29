@@ -58,7 +58,7 @@ button[data-baseweb="tab"] {
 
 /* REMOVE STREAMLIT HEADER */
 header {
-    visibility: hidden;
+    background: transparent;
 }
 
 </style>
