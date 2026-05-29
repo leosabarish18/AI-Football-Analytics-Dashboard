@@ -122,26 +122,38 @@ https://github.com/leosabarish18
 
 # AI Football Analytics Dashboard
 
-## Heatmap
+## Home Dashboard
+![Home](screenshots/home.png)
 
+## Heatmap
 ![Heatmap](screenshots/heatmap.png)
 
 ## Pass Map
-
 ![Pass Map](screenshots/passmap.png)
 
 ## Passing Network
-
 ![Passing Network](screenshots/passingnetwork.png)
 
 ## Formation
-
 ![Formation](screenshots/formation.png)
 
 ## Shot Map
-
 ![Shot Map](screenshots/shotmap.png)
 
 ## Match Statistics
-
 ![Match Statistics](screenshots/matchstatic.png)
+
+## Player Statistics
+![Player Statistics](screenshots/playerstatic.png)
+
+## Radar Chart
+![Radar Chart](screenshots/radarchart.png)
+
+## AI Insights
+![AI Insights](screenshots/insights.png)
+
+## Team Comparison
+![Team Comparison](screenshots/comparison.png)
+
+## Post-Match AI Analysis
+![Post Match Analysis](screenshots/postmatchanaly.png)
