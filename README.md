@@ -119,3 +119,29 @@ Sree Sabarish
 
 GitHub:
 https://github.com/leosabarish18
+
+# AI Football Analytics Dashboard
+
+## Heatmap
+
+![Heatmap](screenshots/heatmap.png)
+
+## Pass Map
+
+![Pass Map](screenshots/passmap.png)
+
+## Passing Network
+
+![Passing Network](screenshots/passingnetwork.png)
+
+## Formation
+
+![Formation](screenshots/formation.png)
+
+## Shot Map
+
+![Shot Map](screenshots/shotmap.png)
+
+## Match Statistics
+
+![Match Statistics](screenshots/matchstats.png)
